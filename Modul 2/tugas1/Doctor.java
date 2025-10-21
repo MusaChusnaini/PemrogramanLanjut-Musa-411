@@ -16,9 +16,13 @@ class Doctor {
     }
 
     public void applyBonus() {
-        double bonus = getSalary() * BONUS_RATE;
+        double bonus = getBonus();
         setSalary(getSalary() + bonus);
         System.out.println("Bonus applied! New Salary : " + getSalary());
+    }
+
+    private double getBonus() {
+        return getSalary() * BONUS_RATE;
     }
 
     public void printDetails() {
